@@ -5,7 +5,7 @@
 int main()
 {
     setlocale(LC_ALL, "RUS");
-    int n , m , ch=1;
+    int n , m;
     
     std::cout << "Кол-во строк и столбцов: ";
     std::cin >> n >> m;
@@ -16,27 +16,19 @@ int main()
         std::cin >> n>> m;
     }
     
-
+    //Инициализация динамического двумерного массива && Заполнение случайными числами от 0 до 2
+    //В условиях не написано про заполнение матрицы вручную (cin>>)
     int** arr = new int*[n];
     for (int i = 0; i < n; i++) {
         arr[i] = new int[m];
-    }
-
-    for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-             arr[i][j] = rand()%3;
-        }
-    }
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-
+            arr[i][j] = rand() % 2;
             std::cout << arr[i][j] << " ";
-            
         }
-        std::cout<<std::endl;
+        std::cout << '\n';
     }
-    std::cout << '\n';
+    std::cout <<"      Матрица NxM" << '\n'<<'\n';
+  
 
       
     int* B = new int[m];
@@ -50,7 +42,7 @@ int main()
     
    
     for (int i = 0; i < m; i++) std::cout << B[i] << " ";
-    std::cout << " = B";
+    std::cout <<'\n' << "      Массив B"<<'\n';
   
 }
 

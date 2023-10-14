@@ -30,7 +30,7 @@ int main()
     std::cout <<"      Матрица NxM" << '\n'<<'\n';
   
 
-      
+    //Заполнение массива B, проверка с помощью суммы std::accumulate
     int* B = new int[m];
     for (int i=0; i < m; i++) {
         int total = std::accumulate(arr, arr + n, 0, [i](int a, int* b) {
